@@ -6,7 +6,7 @@ const {Schema} = mongoose;
 
 const operatorSchema = new Schema({
     title : {type: String}, 
-    description : {type: Sting},
+    description : {type: String},
     slogan : {type: String}, 
     domainName : {type: String}, 
     subdomain : {type: String}, 
@@ -24,5 +24,7 @@ const operatorSchema = new Schema({
     },
     standing : {type: String, enum:[]}
 }, { timestamps: { createdAt: 'created_at', updatedAt : 'updated_last' } })
+
+operatorSchema.plugin(require('../plugins/hash_password'));
 
 module.exports = mongoose.model('Operator',operatorSchema);

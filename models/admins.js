@@ -15,4 +15,6 @@ const adminSchema = new Schema({
     standing : {type: String, enum:[]}
 },{ timestamps: { createdAt: 'created_at', updatedAt : 'updated_last' } })
 
+adminSchema.plugin(require('../plugins/hash_password'));
+
 module.exports = mongoose.model('Admin',adminSchema);
