@@ -1,0 +1,29 @@
+{
+  "name": "bx-js-mongo",
+  "version": "1.0.0",
+  "description": "BX MongoDB API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nditah/bx-js-mongo.git"
+  },
+  "keywords": [
+    "bx",
+    "mongo"
+  ],
+  "author": "Livinus Igbaji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nditah/bx-js-mongo/issues"
+  },
+  "homepage": "https://github.com/Nditah/bx-js-mongo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "joi": "^13.7.0",
+    "mongoose": "^5.3.3"
+  }
+}
