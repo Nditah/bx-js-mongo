@@ -305,25 +305,44 @@ start the mongo server or mysql server
 
 
 
-## trades Endpoints
+## sales Endpoints
 
-### Base URL : `<host>/trades`
+### Base URL : `<host>/sales`
 
 - *GET* `/`
-    Gets all trades
+    Gets all sales
 
 - *POST* `/`
-    Create a new trade on the database
+    Create a new sale on the database
 
-- *GET* `/:trade`
-    Fetches the trade with `id` `:trade`
+- *GET* `/:sale`
+    Fetches the sale with `id` `:sale`
 
-- *PUT* `/:trade`
-    Modifies the trade with `id` `:trade`
+- *PUT* `/:sale`
+    Modifies the sale with `id` `:sale`
 
-- *DELETE* `/:trade`
-    Deletes the trade with `id` `:trade`
+- *DELETE* `/:sale`
+    Deletes the sale with `id` `:sale`
 
+
+## buys Endpoints
+
+### Base URL : `<host>/buys`
+
+- *GET* `/`
+    Gets all buys
+
+- *POST* `/`
+    Create a new buy on the database
+
+- *GET* `/:buy`
+    Fetches the buy with `id` `:buy`
+
+- *PUT* `/:buy`
+    Modifies the buy with `id` `:buy`
+
+- *DELETE* `/:buy`
+    Deletes the buy with `id` `:buy`
 
 
 ## translations Endpoints

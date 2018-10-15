@@ -1,6 +1,6 @@
  
         const joi = require('joi');
-        const Trades = require('../models/trades')
+        const Sales = require('../models/sales')
 
 
         module.exports =  class {
@@ -13,8 +13,8 @@
             }
 
             static create(req, res, next){
-                Trades.create(req.body)
-                .then(trades => res.json(trades), next)
+                Sales.create(req.body)
+                .then(sales => res.json(sales), next)
                 .catch(next)
             }
 
@@ -25,33 +25,33 @@
             }
 
             static update(req, res, next){
-                Trades.update({
-                    _id : req.params.trade
+                Sales.update({
+                    _id : req.params.sale
                 }, req.body)
-                .then(({nModified: trade}) => res.json(Boolean(trade).valueOf()), next)
+                .then(({nModified: sale}) => res.json(Boolean(sale).valueOf()), next)
                 .catch(next)
             }
         
             static delete(req, res, next){
-                Trades.deleteOne({
-                    _id : req.params.trade
+                Sales.deleteOne({
+                    _id : req.params.sale
                 })
-                .then(trade => res.json(Boolean(trade).valueOf()), next)
+                .then(sale => res.json(Boolean(sale).valueOf()), next)
                 .catch(next)
             }
         
             static get(req, res, next){
-                Trades.find({})
+                Sales.find({})
                 .sort({created_at : 1})
                 .skip(req.query.offset)
                 .limit(req.query.limit)
-                .then(trade => res.json(trade), next)
+                .then(sale => res.json(sale), next)
                 .catch(next)
             }
         
             static getOne(req, res, next){
-                Trades.findById(req.params.trade)
-                .then(trade => res.json(trade), next)
+                Sales.findById(req.params.sale)
+                .then(sale => res.json(sale), next)
                 .catch(next)
             }
         }
